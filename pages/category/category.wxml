@@ -2,4 +2,3 @@
 <text>pages/category/category.wxml</text>
 <view>我是分类页面</view>
 <button size="mini" bindtap="handBtnclick">按钮</button>
-<view>{{msg}}</view>

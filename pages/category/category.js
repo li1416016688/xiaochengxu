@@ -6,11 +6,6 @@ Page({
    */
   data: {
     msg:"hello"
-  },
-
-  handBtnclick(){
-    this.setData({
-      msg:"hahha"
-    })
   }
+
 })
