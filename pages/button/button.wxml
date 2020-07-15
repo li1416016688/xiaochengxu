@@ -1,0 +1,26 @@
+<!--pages/button/button.wxml-->
+
+<!-- 1、默认独占一行 -->
+<button >按钮</button>
+
+<!-- 2、mini属性 -->
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+
+<!-- 3、type属性 -->
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!-- 4、plain:镂空  -->
+<button size="mini" plain>按钮</button>
+
+<!-- 5、disable:不可用 -->
+<button size="mini"  disabled >按钮</button>
+
+<!-- loading -->
+<button size="mini"  loading="{{isLoading}}" >按钮</button>
+
+<!-- 7、hover-class  -->
+<!-- 添加pressed样式 -->
+<button hover-class="pressed">按钮</button>
