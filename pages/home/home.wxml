@@ -1,4 +1,13 @@
 <!--pages/home/home.wxml-->
 <!--1.小程序的数据绑定-->
 <view>hello !</view>
-<button size="mini" open-type="getUserInfo">按钮</button>
+<!-- 获取用户信息 -->
+<button size="mini" open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">获取授权信息</button>
+<!-- 展示用户信息 -->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+
+<view bindtap="viewhand">{{message}}</view>
+<!-- <view wx:for="{{list}}">{{item.title}}</view> -->
