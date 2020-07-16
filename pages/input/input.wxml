@@ -1,0 +1,33 @@
+<!--pages/input/input.wxml-->
+<!-- 1、input基础使用 -->
+<input></input>
+
+<!-- 2、value:初始化值 -->
+<input value="haha"></input>
+
+<!-- 3、type:决定键盘类型(英文字母+其他符号/数字/身份证) 默认为text
+number:数字输入键盘 idcard:身份证输入键盘 digit:带小数点的数字键盘 -->
+<!-- <input type="text"></input>
+<input type="number"></input>
+<input type="idcard"></input>
+<input type="digit"></input> -->
+<!-- 4、密码类型  隐藏 -->
+<!-- <input password></input> -->
+
+<!-- 5、占位符 -->
+<!-- <input placeholder="haha"></input> -->
+<!-- 6、confirm-type: -->
+
+<!-- <input confirm-type="send"></input>
+<input confirm-type="search"></input>
+<input confirm-type="next"></input>
+<input confirm-type="go"></input>
+<input confirm-type="done"></input> -->
+
+<!-- 7、input绑定事件 -->
+<input 
+bindinput="binput"
+bindfocus="bfocus"
+bindblur="bblur"
+bindconfirm="bconfirm"
+></input>

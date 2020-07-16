@@ -1,0 +1,27 @@
+<!--pages/view/view.wxml-->
+
+<!-- 基本使用容器(div) -->
+<!-- 独占一行 -->
+<view class="box">哈哈</view>
+<view class="">哈哈</view>
+
+<view>
+<text>haha</text>
+<text>hehe</text>
+</view>
+
+<!-- 2、当按键按下时显示的样式 -->
+<view class="box1" hover-class="hover_view">box1</view>
+
+<!-- 3、hover-start-time  按住后多久出现点击态，单位毫秒50-->
+<view class="box1" hover-class="hover_view" hover-start-time="700">box1</view>
+
+
+<!-- 4、hover-stay-time事件 手指松开后点击态保留时间，单位毫秒400 -->
+<!-- hover-stop-propagation :指定是否阻止本节点的祖先节点出现点击态-->
+<view class="box2" hover-class="box2_hover">
+<view class="box1" hover-class="hover_view" hover-stay-time="9000" hover-stop-propagation="">box1</view>
+</view>
+<view class="box2" hover-class="box2_hover">
+<view class="box1" hover-class="hover_view" hover-stay-time="9000" hover-stop-propagation="{{true}}">box1</view>
+</view>

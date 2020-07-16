@@ -1,0 +1,41 @@
+<!--pages/image/image.wxml-->
+
+<!-- 1、image的基本使用 -->
+<!-- 重点:
+1、image组件可以写成单标签,也可以写成双标签
+2、image默认有自己的大小320*240
+
+-->
+<!-- <image></image> -->
+<!-- <image/> -->
+<!-- <text>hhh</text> -->
+
+<!-- src:本地和远程 -->
+<!-- 本地(相对路径) -->
+<!-- <image src="/assets/tabBar/home.png"></image> -->
+<!-- 绝对路径 -->
+<!-- <image src="../../assets/tabBar/home.png"></image> -->
+<!-- 远程地址 -->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 补充:相册里面的图片 -->
+<button bindtap="handleChooseAlbum">选中图片</button>
+<!-- <image src="{{imagePath}}" ></image> -->
+<!-- lazy-load 懒加载:将进入页面的时候才加载图片 -->
+
+<!-- 3、bindload:监听图片加载完成 -->
+<!-- <image  src="{{imagePath}}" bindload="handleImageLoad" ></image> -->
+<!-- <image wx:for="{{1}}" src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+bindload="handleImageLoad" lazy-load></image> -->
+<!-- 4、识别小程序的小程序码 -->
+<!-- <image  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+show-menu-by-longpress></image> -->
+
+<!-- 5、图片默认为缩放mode='scaleToFill' -->
+
+<image  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+mode="scaleToFill"></image>
+<image  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+mode="aspectFit"></image>
+<image  src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"
+mode="aspectFill"></image>
