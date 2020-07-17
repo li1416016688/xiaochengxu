@@ -1,0 +1,25 @@
+.box{
+  background: gray;
+  font-size: 40px;
+  color: yellowgreen;
+}
+.box1{
+width: 100px;
+height: 100px;
+background: orange;
+
+}
+.box2{
+width: 200rpx;
+height: 200rpx;
+background: goldenrod;
+
+}
+.box3{
+font-size: 30px;
+
+}
+.box4{
+font-size: 60rpx;
+
+}

@@ -1,0 +1,8 @@
+@import './style/btn.wxss';
+.contain{
+  color: wheat;
+  font-size: 60px;
+}
+.content{
+  background: wheat;
+}

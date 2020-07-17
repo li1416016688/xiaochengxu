@@ -1,0 +1,7 @@
+/* pages/wxss/wxss.wxss */
+@import './style/box.wxss';
+.content{
+  background: wheat;
+}
+
+
