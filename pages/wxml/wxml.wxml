@@ -1,0 +1,39 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- <view></view> -->
+<!-- mustache语法 -->
+<view>{{msg}}</view> 
+<view>{{firstname}}{{lastname}}</view> 
+<view>{{firstname+' '+lastname}}</view> 
+<view>{{age>18? '成年人':'未成年'}}</view> 
+<view>{{nowTime}}</view>
+<!-- 绑定属性 -->
+<button size="mini" bindtap="handlecolor">切换颜色</button>
+<view class='box {{isActive?"active":""}}'>hahaha</view>  
+
+<!-- 条件判段 -->
+<button size="mini" bindtap="handleShow">切换显示</button>
+<!-- wx:if -->
+<view wx:if="{{isshow}}">呵呵呵</view>
+
+<!-- wx.elif/wx:else -->
+<!--  -->
+<button size="mini" bindtap="handleincrement">分数</button>
+<view wx:if="{{score>=90}}">优秀</view>
+<view wx:elif="{{score>=80}}">良好</view>
+<view wx:elif="{{score>=60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<button size="mini" bindtap="handleincrement">分数</button>
+<!-- 区别:
+hidden:将一个组件隐藏起来时,该组件依然存在(display:none)
+wx:if:将一个组件隐藏起来的时候,该组件根本不存在(压根没有创建)
+选择:
+显示和隐藏的切换频率高,用hidden
+显示和隐藏的切换频率低,用wx:if
+ -->
+<view hidden="{{true}}">我是hidden属性控制的内容</view>
+<view wx:if="{{false}}">我是wx属性控制的内容</view>
+
+
+<!-- <map class="map" longitude="116.11l" latitude="39.6"></map> -->

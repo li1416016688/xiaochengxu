@@ -1,5 +1,7 @@
 /* pages/wxss/wxss.wxss */
 @import './style/box.wxss';
+@import './style/search.wxss';
+
 .content{
   background: wheat;
 }
