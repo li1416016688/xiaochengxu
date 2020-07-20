@@ -13,7 +13,14 @@ Page({
     isActive: false,
     isshow: true,
     score:59,
-    
+    movies:['星际穿越','三毛','大话西游'],
+    nums:[
+      [10,14,11,18],
+      [20,24,31,48],
+      [110,124,211,318]
+    ],
+    letters: ['a', 'b', 'c'],
+    doue: 25.666666.toFixed(2)
   },
   onLoad() {
     setInterval(() => {

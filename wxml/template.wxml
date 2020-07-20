@@ -1,0 +1,8 @@
+<!-- template -->
+<!-- 之前小程序不支持自定义组件,为了代码复用:template 
+模版中包裹的内容,在没有被使用前是不会进行任何渲染
+-->
+<template name="warnbutton">
+<button size="mini" type="warn">{{btnText}}</button>
+<view>{{contentv}}</view>
+</template>

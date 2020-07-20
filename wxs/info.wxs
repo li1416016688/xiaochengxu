@@ -1,0 +1,13 @@
+//js代码
+var msg = "hello world";
+var name = "coderwhy";
+var sum = function (num1, num2) {
+  return num1 + num2
+}
+//common.js的模块化导出的写法
+//如果不导出的话只能在wxs里面生效
+module.exports = {
+  msg: msg,
+  name: name,
+  sum: sum
+}

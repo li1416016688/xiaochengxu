@@ -4,5 +4,5 @@
   font-size: 60px;
 }
 .content{
-  background: wheat;
+  background: greenyellow;
 }

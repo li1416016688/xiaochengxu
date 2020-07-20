@@ -1,0 +1,6 @@
+
+<view>
+<include src="./daohang.wxml" />
+
+<view>头部</view>
+</view>
