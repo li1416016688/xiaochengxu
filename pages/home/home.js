@@ -1,76 +1,78 @@
 // pages/home/home.js
 import request from '../../service/network.js'
 Page({
+  handleShowaction(){
+  wx.showActionSheet({
+    itemList: ['相册','拍照'],
+    itemColor: 'yellow',
+    success: function(res) {},
+    fail: function(res) {},
+    complete: function(res) {},
+  })
+  },
+  handleShowLoading() {
+    wx.showLoading({
+      title: '我是认真的',
+      mask: true,
+      success: function(res) {},
+      fail: function(res) {},
+      complete: function(res) {},
+    })
+    setTimeout(()=>{
+      // 必须调用这个才能让蒙版消失
+      wx.hideLoading()
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
+    },3000)
+  },
+  handleShowModal() {
+    wx: wx.showModal({
+      title: '我是showModal',
+      content: '我是内容,哈哈哈',
+      // showCancel: false,
+      cancelText: '退出',
+      cancelColor: 'red',
+      confirmText: '进入',
+      confirmColor: 'green',
+
+      success: function(res) {
+        console.log(res);
+        if (res.cancel) {
+          console.log("取消");
+
+        }
+        if (res.confirm) {
+          console.log("确定");
+
+        }
+        // if(res.cancel==true){
+        //   console.log("取消");
+
+        // } else if (res.cancel == false){
+        //   console.log("确定");
+
+        // }
+      },
+      fail: function(res) {},
+      complete: function(res) {},
+    })
 
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function(options) {
-    // 1、发送网络请求
-    this.get_data_origin()
-    // 2、使用封装的request发送网络请求
-    // promise最大的好处就是防止出现回调地狱
-request({
-  url='http://doc.nnzhp.cn/index.php?s=/6&page_id=8'
-}).then(res=>{
-  console.log(res);
-}).catch(err =>{
-  console.log(err);
-})
-
-  },
-
-  get_data_origin(){
-    // 发送网络请求
-    // wx: wx.request({
-    //   url: 'http://123.207.32.32:8080/recommend',
-
-    //   success: function(res) {
-    //     console.log(res)
-    //   },
-
-    // })
-    //get请求携带参数
-    // wx: wx.request({
-    //   url: 'http://123.207.32.32:8080/recommend',
-    //   data: {
-    //     type: 'sell',
-    //     page: 1
-    //   },
-    //   success: function(res) {
-    //     console.log(res)
-    //   },
-
-    // })
-    //post请求,并携带参数()
-    
-    wx: wx.request({
-      url: 'http://httpbin.org/post',
-      data: {
-        name: 'coder',
-        age: 14
+  handleShowToast() {
+    wx.showToast({
+      title: '你好啊',
+      duration: 3000,
+      icon: 'loading',
+      // image:'https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/global/img/nicon_10750f3.png',
+      mask: true,
+      success: function() {
+        console.log('chele');
       },
-      header: {},
-      method: 'post',
-      dataType: 'json',
-      responseType: 'text',
-      success: function (res) {
-        console.log(res)
+      fail: function() {
+
       },
-      fail: function (res) {
-        // 失败回调
-      },
-      complete: function (res) {
-        // 调用结束的回调函数
-        console.log("111");
-      },
+      complete: function() {}
     })
   }
+
+
 })
