@@ -1,0 +1,5 @@
+/* components/cpn1/cpn1.wxss */
+
+.cp1{
+  font-size: 20px;
+}

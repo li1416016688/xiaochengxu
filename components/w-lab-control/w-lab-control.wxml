@@ -1,0 +1,13 @@
+<!--components/w-lab-control/w-lab-control.wxml-->
+<view class="tab-control">
+<block wx:for="{{title}}" wx:index='{{index}}'>
+<view class="tab-item {{currentIndex==index?'actice':''}}" 
+bind:tap="handleclick" data-index="{{index}}"
+>
+<text>{{item}}</text>
+</view>
+
+</block>
+
+
+</view>

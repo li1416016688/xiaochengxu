@@ -1,1 +1,10 @@
 /* pages/home/home.wxss */
+.title{
+  color: firebrick;
+}
+.red{
+  color: red;
+}
+.blue{
+  color: blue;
+}

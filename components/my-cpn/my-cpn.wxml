@@ -1,0 +1,4 @@
+<!--compoents/my-cpn/my-cpn.wxml-->
+<view class="title">{{title}}</view>
+<cpn1/>
+<view class="content">{{content}}</view>

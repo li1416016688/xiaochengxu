@@ -1,3 +1,45 @@
 <!--pages/home/home.wxml-->
+<!-- <my-style></my-style>
+<my-cpn/> -->
+<!-- 插槽的使用 -->
+<!-- 7.2多个插槽的使用 -->
+<!-- 注意事项:
+1、必须给每一个插槽起一个名字:name属性
+2、必须在Component(组件)对象中添加一个选项:options->multipleSlots设置为true-->
 
-<text class="title">hello World</text>
+<button size="mini" bind:tap="handleuptshow">切换显示</button>
+<block wx:if="{{isshow}}">
+<my-mslot>
+  <button size="mini"slot="slot2">我是插入的按扭</button>
+  <slider slot="slot1"></slider>
+</my-mslot>
+<my-mslot>
+</my-mslot>
+</block>
+<!-- 7.1单个插槽的使用 -->
+<my-slot>
+  <button size="mini" >我是插入的按扭</button>
+  
+</my-slot>
+
+<my-slot>
+  <text>hahah</text>
+</my-slot>
+<my-slot>
+  <image src="https://bkimg.cdn.bcebos.com/pic/a8014c086e061d950a7b3462aabc1dd162d9f2d35c1a?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2UxNTA=,g_7,xp_5,yp_5"></image>
+</my-slot>
+
+<my-slot>
+<!-- 滑块:进度条 -->
+ <slider value="60"></slider>
+</my-slot>
+<!-- 通过其他页面对组件修改 -->
+<button size="mini" bind:tap="handleupdate">修改组件内的数据 </button>
+<my-sel id="sel" class="sel-class" />
+<my-prop title="haha" titleclass="red" />
+<my-prop title="hehe" />
+<my-prop titleclass="blue" />
+<!-- 组件事件传递 -->
+<view>当前计数{{count}}</view>
+<my-event bind:increment="handleIncrement" />
+<w-tab-control title="{{['衣服','裤子','鞋子']}}" bind:itemclick="handletabclick" />
